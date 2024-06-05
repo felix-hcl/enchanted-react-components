@@ -33,6 +33,7 @@
     "lint": "eslint --ext .ts,.tsx src",
     "lint-fix": "eslint --ext .ts,.tsx --fix src",
     "prepack": "npm ci && npm run build",
+    "prepare": "workaround-broken-npm-prepack-behavior prepack",
     "test-storyshots": "jest --collectCoverage=false --testPathPattern \"__tests__/unit/storyshots-(ltr|rtl).test.ts\"",
     "test": "cross-env NODE_ICU_DATA=node_modules/full-icu CI=true jest --config ./jest.config.js --testTimeout=10000 --testPathPattern \"__tests__/(unit|integration)\" --testPathIgnorePatterns \"__tests__/unit/storyshots-(ltr|rtl).test.ts\"",
     "test-unit": "CI=true jest --config ./jest.config.js --testPathPattern \"__tests__/unit\" --testTimeout=10000 --testPathIgnorePatterns \"__tests__/unit/storyshots-(ltr|rtl).test.ts\"",
@@ -99,7 +100,8 @@
     "storybook": "^7.6.3",
     "ts-jest": "^29.1.1",
     "typescript": "^4.1.5",
-    "webpack": "^5.89.0"
+    "webpack": "^5.89.0",
+    "workaround-broken-npm-prepack-behavior": "github:cspotcode/workaround-broken-npm-prepack-behavior#1a7adbbb8a527784daf97edad6ba42d6e96611f6"
   },
   "peerDependencies": {
     "react": "^18.2.0"
