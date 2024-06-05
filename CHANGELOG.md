@@ -4,6 +4,7 @@
 
 ### Added
 - Adding the `list--edit` icon to the icons preview
+- prepack command to enable usage of pre-release builds
 
 ### Fixed
 

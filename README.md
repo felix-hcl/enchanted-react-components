@@ -47,6 +47,9 @@ We provide the following utility development commands:
 | `unit and integration` | `npm run test` | Run unit and integration tests |
 | `storyshots` | `npm run test-storyshots` | Run storyshots test. The env parameter `DONT_EXIT_ON_DIFF=true` provides a feature that the tests are not failing if some deviations are detected. |
 
+### Pre-release builds
+Instead of publishing a pre-release build to npm, you can use the `npm pack` command to create a pre-release build. This will create a tarball of the package in the `dist` folder. You can then install this tarball in your project using `npm install <path-to-tarball>`. Alternatively you can install from github using `npm install` with a github reference.
+
 ### Component structure
 
 #### Atomic component
